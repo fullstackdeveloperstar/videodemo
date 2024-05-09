@@ -1,0 +1,13 @@
+[Unit]
+Description=Daemon process for receiving SRT stream and sending it to UDP
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/srt-live-transmit udp://:6300 "srt://:6003?mode=listener"
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
