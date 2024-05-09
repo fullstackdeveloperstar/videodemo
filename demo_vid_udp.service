@@ -5,7 +5,7 @@ StartLimitBurst=5
 
 [Service]
 Type=simple
-ExecStart=/home/m_mamontov93/videodemo/loopscipt.sh
+ExecStart=cd /home/m_mamontov93/videodemo & ./loopscipt.sh
 Restart=on-failure
 RestartSec=always
 
