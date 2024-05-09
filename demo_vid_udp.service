@@ -5,9 +5,9 @@ StartLimitBurst=5
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/ffmpeg -re -i /home/m_mamontov93/videodemo/a.ts -c:v copy -c:a copy -f mpegts "udp://127.0.0.1:6300?pkt_size=1316"
+ExecStart=/home/m_mamontov93/videodemo/loopscipt.sh
 Restart=on-failure
-RestartSec=5s
+RestartSec=always
 
 [Install]
 WantedBy=multi-user.target
